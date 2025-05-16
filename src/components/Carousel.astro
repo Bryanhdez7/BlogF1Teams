@@ -10,97 +10,94 @@
 
 <div class="carousel-container">
   <div class="slide">
-    <div class="item" style="background-image: url(https://images.daznservices.com/di/library/DAZN_News/d5/52/ferrari-sf25_lwsaxodr0cim1jo7iz6nb2ar7.jpg?t=453026013);">
-      <div class="content">
-        <div class="name">Ferrari</div>
-        <div class="des">Pilotos: Charles Leclerc y Lewis Hamilton.</div>
-        <button>Ver Mas</button>
+    <!-- Cards individuales -->
+    {[
+      {
+        name: "Ferrari",
+        desc: "Pilotos: Charles Leclerc y Lewis Hamilton.",
+        img: "https://cdn-3.motorsport.com/images/amp/6n9JybOY/s1000/ferrari-sf-25.jpg"
+      },
+      {
+        name: "Red Bull",
+        desc: "Pilotos: Max Verstappen y Yuki Tsunoda.",
+        img: "https://www.themanual.com/wp-content/uploads/sites/9/2025/02/Red-Bull-Racing-RB21-F1-car-for-the-2025-season-right-front-three-quarter-view.jpg?p=1"
+      },
+      {
+        name: "Mercedes",
+        desc: "Pilotos: George Russell y Andrea Kimi Antonelli.",
+        img: "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/t_16by9Centre/f_auto/q_auto/fom-website/2025/Mercedes/Formula%201%20header%20templates%20-%202025-02-24T142006.923"
+      },
+      {
+        name: "McLaren",
+        desc: "Pilotos: Lando Norris y Oscar Piastri.",
+        img: "https://mclaren.bloomreach.io/delivery/resources/content/gallery/mclaren-racing/formula-1/2025/nsr/f1-75-live-m/web/mcl39-cover-image.jpg"
+      },
+      {
+        name: "Aston Martin",
+        desc: "Pilotos: Fernando Alonso y Lance Stroll.",
+        img: "https://cdn-4.motorsport.com/images/amp/2y3jxxo6/s1000/aston-martin-racing-amr25-2.jpg"
+      },
+      {
+        name: "Alpine",
+        desc: "Pilotos: Pierre Gasly y Jack Doohan.",
+        img: "https://www.racefans.net/wp-content/uploads/2025/02/Untitled-4.jpg"
+      },
+      {
+        name: "Haas",
+        desc: "Pilotos: Oliver Bearman y Esteban Ocon.",
+        img: "https://cdn-8.motorsport.com/images/amp/0mb1LGq2/s1000/haas-vf-24-livery.jpg"
+      },
+      {
+        name: "Racing Bulls",
+        desc: "Pilotos: Liam Lawson e Isack Hadjar.",
+        img: "https://i.redd.it/vcarb-racing-bulls-2025-livery-v0-wqw0o5wilyje1.jpg?width=2048&format=pjpg&auto=webp&s=1e1a1ff06d8f2c96286a3b68a5d84a4741b966ab"
+      },
+      {
+        name: "Williams",
+        desc: "Pilotos: Alexander Albon y Carlos Sainz.",
+        img: "https://cdn.sanity.io/images/fnx611yr/production/7646e1734aef24c6f791a90f9bbba4959c95aa0f-4096x2304.jpg"
+      },
+      {
+        name: "Kick Sauber",
+        desc: "Pilotos: Nico Hülkenberg y Gabriel Bortoleto.",
+        img: "https://e00-especiales-marca.uecdn.es/motor/images/formula1/escuderias/2025/kicksauber/coche03.jpg"
+      }
+    ].map(car => (
+      <div class="item" style={`background-image: url(${car.img});`}>
+        <div class="content">
+          <div class="name">{car.name}</div>
+          <div class="des">{car.desc}</div>
+          <button aria-label={`Más sobre ${car.name}`}>Ver Más</button>
+        </div>
       </div>
-    </div>
-    <div class="item" style="background-image: url(https://images.daznservices.com/di/library/DAZN_News/89/7b/red-bull-rb21-mundial-f1-2025_1pm8f7r799znd17396l4i8fflw.png?t=452859237);">
-      <div class="content">
-        <div class="name">Red Bull</div>
-        <div class="des">Pilotos: Max Verstappen y Yuki Tsunoda.</div>
-        <button>Ver Mas</button>
-      </div>
-    </div>
-    <div class="item" style="background-image: url(https://cdn-5.motorsport.com/images/amp/YKEDQ5B0/s1000/mercedes-f1-w16.jpg);">
-      <div class="content">
-        <div class="name">Mercedes</div>
-        <div class="des">Pilotos: George Russell y Andrea Kimi Antonelli.</div>
-        <button>Ver Mas</button>
-      </div>
-    </div>
-    <div class="item" style="background-image: url(https://cdn-8.motorsport.com/images/mgl/6zQ53ykY/s700/mclaren-mcl39.jpg);">
-      <div class="content">
-        <div class="name">McLaren</div>
-        <div class="des">Pilotos: Lando Norris y Oscar Piastri.</div>
-        <button>Ver Mas</button>
-      </div>
-    </div>https
-    <div class="item" style="background-image: url(https://cdn-4.motorsport.com/images/amp/YEQzoEKY/s1000/aston-martin-racing-amr25.jpg);">
-      <div class="content">
-        <div class="name">Aston Martin</div>
-        <div class="des">Pilotos: Fernando Alonso y Lance Stroll.</div>
-        <button>Ver Mas</button>
-      </div>
-    </div>
-    <div class="item" style="background-image: url(https://hips.hearstapps.com/hmg-prod/images/alpine-2025-02-67b5a1aaacb9e.jpg?crop=1xw:1xh;center,top&resize=980:*);">
-      <div class="content">
-        <div class="name">Alpine</div>
-        <div class="des">Pilotos: Pierre Gasly y Jack Doohan.</div>
-        <button>Ver Mas</button>
-      </div>
-    </div>
-    <div class="item" style="background-image: url(https://hips.hearstapps.com/hmg-prod/images/haas-2025-03-67b5a31ab1e4e.jpg?crop=1xw:1xh;center,top&resize=980:*);">
-      <div class="content">
-        <div class="name">Haas</div>
-        <div class="des">Pilotos: Oliver Bearman y Esteban Ocon.</div>
-        <button>Ver Mas</button>
-      </div>
-    </div>
-    <div class="item" style="background-image: url(https://i.redd.it/vcarb-racing-bulls-2025-livery-v0-wqw0o5wilyje1.jpg?width=2048&format=pjpg&auto=webp&s=1e1a1ff06d8f2c96286a3b68a5d84a4741b966ab);">
-      <div class="content">
-        <div class="name">Racing Bulls</div>
-        <div class="des">Pilotos: Liam Lawson e Isack Hadjar.</div>
-        <button>Ver Mas</button>
-      </div>
-    </div>
-    <div class="item" style="background-image: url(https://www.racecar-engineering.com/wp-content/uploads/2025/03/XPB_1328623_HiRes.jpg);">
-      <div class="content">
-        <div class="name">Williams</div>
-        <div class="des">Pilotos: Alexander Albon y Carlos Sainz.</div>
-        <button>Ver Mas</button>
-      </div>
-    </div>
-    <div class="item" style="background-image: url(https://e00-especiales-marca.uecdn.es/motor/images/formula1/escuderias/2025/kicksauber/coche03.jpg);">
-      <div class="content">
-        <div class="name">Kick Sauber</div>
-        <div class="des">Pilotos: Nico Hülkenberg y Gabriel Bortoleto.</div>
-        <button>Ver Mas</button>
-      </div>
-    </div>
-
+    ))}
   </div>
 
   <div class="button">
-    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+    <button class="prev" aria-label="Anterior" role="button">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <button class="next" aria-label="Siguiente" role="button">
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
   </div>
 
   <script is:inline>
     window.addEventListener('DOMContentLoaded', () => {
       const next = document.querySelector('.next');
       const prev = document.querySelector('.prev');
+      const slide = document.querySelector('.slide');
 
       next.addEventListener('click', () => {
-        const items = document.querySelectorAll('.item');
-        document.querySelector('.slide').appendChild(items[0]);
+        const first = slide.firstElementChild;
+        slide.appendChild(first.cloneNode(true));
+        slide.removeChild(first);
       });
 
       prev.addEventListener('click', () => {
-        const items = document.querySelectorAll('.item');
-        document.querySelector('.slide').prepend(items[items.length - 1]);
+        const last = slide.lastElementChild;
+        slide.insertBefore(last.cloneNode(true), slide.firstElementChild);
+        slide.removeChild(last);
       });
     });
   </script>
