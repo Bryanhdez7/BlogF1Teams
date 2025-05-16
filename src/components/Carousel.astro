@@ -1,0 +1,107 @@
+---
+// src/components/Carousel.astro
+---
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  crossorigin="anonymous"
+/>
+<link rel="stylesheet" href="/src/styles/carousel.css" />
+
+<div class="carousel-container">
+  <div class="slide">
+    <div class="item" style="background-image: url(https://images.daznservices.com/di/library/DAZN_News/d5/52/ferrari-sf25_lwsaxodr0cim1jo7iz6nb2ar7.jpg?t=453026013);">
+      <div class="content">
+        <div class="name">Ferrari</div>
+        <div class="des">Pilotos: Charles Leclerc y Lewis Hamilton.</div>
+        <button>Ver Mas</button>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(https://images.daznservices.com/di/library/DAZN_News/89/7b/red-bull-rb21-mundial-f1-2025_1pm8f7r799znd17396l4i8fflw.png?t=452859237);">
+      <div class="content">
+        <div class="name">Red Bull</div>
+        <div class="des">Pilotos: Max Verstappen y Yuki Tsunoda.</div>
+        <button>Ver Mas</button>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(https://cdn-5.motorsport.com/images/amp/YKEDQ5B0/s1000/mercedes-f1-w16.jpg);">
+      <div class="content">
+        <div class="name">Mercedes</div>
+        <div class="des">Pilotos: George Russell y Andrea Kimi Antonelli.</div>
+        <button>Ver Mas</button>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(https://cdn-8.motorsport.com/images/mgl/6zQ53ykY/s700/mclaren-mcl39.jpg);">
+      <div class="content">
+        <div class="name">McLaren</div>
+        <div class="des">Pilotos: Lando Norris y Oscar Piastri.</div>
+        <button>Ver Mas</button>
+      </div>
+    </div>https
+    <div class="item" style="background-image: url(https://cdn-4.motorsport.com/images/amp/YEQzoEKY/s1000/aston-martin-racing-amr25.jpg);">
+      <div class="content">
+        <div class="name">Aston Martin</div>
+        <div class="des">Pilotos: Fernando Alonso y Lance Stroll.</div>
+        <button>Ver Mas</button>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(https://hips.hearstapps.com/hmg-prod/images/alpine-2025-02-67b5a1aaacb9e.jpg?crop=1xw:1xh;center,top&resize=980:*);">
+      <div class="content">
+        <div class="name">Alpine</div>
+        <div class="des">Pilotos: Pierre Gasly y Jack Doohan.</div>
+        <button>Ver Mas</button>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(https://hips.hearstapps.com/hmg-prod/images/haas-2025-03-67b5a31ab1e4e.jpg?crop=1xw:1xh;center,top&resize=980:*);">
+      <div class="content">
+        <div class="name">Haas</div>
+        <div class="des">Pilotos: Oliver Bearman y Esteban Ocon.</div>
+        <button>Ver Mas</button>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(https://i.redd.it/vcarb-racing-bulls-2025-livery-v0-wqw0o5wilyje1.jpg?width=2048&format=pjpg&auto=webp&s=1e1a1ff06d8f2c96286a3b68a5d84a4741b966ab);">
+      <div class="content">
+        <div class="name">Racing Bulls</div>
+        <div class="des">Pilotos: Liam Lawson e Isack Hadjar.</div>
+        <button>Ver Mas</button>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(https://www.racecar-engineering.com/wp-content/uploads/2025/03/XPB_1328623_HiRes.jpg);">
+      <div class="content">
+        <div class="name">Williams</div>
+        <div class="des">Pilotos: Alexander Albon y Carlos Sainz.</div>
+        <button>Ver Mas</button>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(https://e00-especiales-marca.uecdn.es/motor/images/formula1/escuderias/2025/kicksauber/coche03.jpg);">
+      <div class="content">
+        <div class="name">Kick Sauber</div>
+        <div class="des">Pilotos: Nico Hülkenberg y Gabriel Bortoleto.</div>
+        <button>Ver Mas</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="button">
+    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+
+  <script is:inline>
+    window.addEventListener('DOMContentLoaded', () => {
+      const next = document.querySelector('.next');
+      const prev = document.querySelector('.prev');
+
+      next.addEventListener('click', () => {
+        const items = document.querySelectorAll('.item');
+        document.querySelector('.slide').appendChild(items[0]);
+      });
+
+      prev.addEventListener('click', () => {
+        const items = document.querySelectorAll('.item');
+        document.querySelector('.slide').prepend(items[items.length - 1]);
+      });
+    });
+  </script>
+</div>
